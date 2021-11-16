@@ -14,31 +14,32 @@
         Style the page and have this function trigger when a user clicks a button with the text start.
         Bonus: upload the file to a repository with a Readme outlining the application.
     -->
-
-    <button onclick="fizzBuzz()">Start</button>
-    <ul id="fizzBuzz"></ul>
-    <script>
-        function fizzBuzz() 
-        {
-            const list = document.getElementById('fizzBuzz');
-            for(let i = 1; i <= 100; i++) 
+    <div class="container" style="margin: 250px;">
+        <button onclick="fizzBuzz()" style="background-color: red;">Start</button>
+        <ul id="fizzBuzz"></ul>
+        <script>
+            function fizzBuzz() 
             {
-                let createItems = document.createElement('li');
-                createItems.setAttribute('id', i);
-                let append = " ";
-                if (i % 3 === 0)
+                const list = document.getElementById('fizzBuzz');
+                for(let i = 1; i <= 100; i++) 
                 {
-                    append += 'Fizz';
-                } 
-                if (i % 5 === 0)
-                {
-                    append += 'Buzz';
+                    let createItems = document.createElement('li');
+                    createItems.setAttribute('id', i);
+                    let append = " ";
+                    if (i % 3 === 0)
+                    {
+                        append += 'Fizz';
+                    } 
+                    if (i % 5 === 0)
+                    {
+                        append += 'Buzz';
+                    }
+                    createItems.innerHTML = i + append;
+                    list.appendChild(createItems);
                 }
-                createItems.innerHTML = i + append;
-                list.appendChild(createItems);
             }
-        }
-    </script>
+        </script>
+    </div>
 
     
 </body>
